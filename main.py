@@ -16,7 +16,7 @@ def par_impar():
             break
 
         if escolha_usuario not in ['P', 'Í', 'I']:
-            print("Escolha inválida. Tente novamente.")
+            print("Escolha inválida. Tente novamente: ")
             continue
 
         if escolha_usuario == 'Í':
@@ -25,7 +25,7 @@ def par_impar():
         try:
             numero_usuario = int(input("Digite um número inteiro: "))
         except ValueError:
-            print("Entrada inválida. Por favor, digite um número inteiro.")
+            print("Entrada inválida. Por favor, digite um número inteiro: ")
             continue
 
         numero_ia = random.randint(0, 10)
