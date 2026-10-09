@@ -13,4 +13,19 @@ def par_impar():
 
         if escolha_usuario == 'S':
             print("\nSaindo do jogo..")
-            
+            break
+
+        if escolha_usuario not in ['P', 'Í', 'I']:
+            print("Escolha inválida. Tente novamente.")
+            continue
+
+        if escolha_usuario == 'Í':
+            escolha_usuario = 'I'
+
+        try:
+            numero_usuario = int(input("Digite um número inteiro: "))
+        except ValueError:
+            print("Entrada inválida. Por favor, digite um número inteiro.")
+            continue
+
+        
