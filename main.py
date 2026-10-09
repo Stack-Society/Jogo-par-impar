@@ -9,7 +9,7 @@ def par_impar():
     vitorias_ia = 0
 
     while True:
-        escolha_usuario = input("\nEscolha [P]ar ou [Í]par - S para sair").strip()
+        escolha_usuario = input("\nEscolha [P]ar ou [Í]par - S para sair: ").strip().upper()
 
         if escolha_usuario == 'S':
             print("\nSaindo do jogo..")
@@ -28,4 +28,24 @@ def par_impar():
             print("Entrada inválida. Por favor, digite um número inteiro.")
             continue
 
-        
+        numero_ia = random.randint(0, 10)
+        soma = numero_usuario + numero_ia
+
+        resultado = "P" if soma % 2 == 0 else "I"
+
+        print(f"\nVocê escolheu: {escolha_usuario}")
+        print(f"Você jogou: {numero_usuario}")
+        print(f"A IA jogou: {numero_ia}")
+
+        if resultado == escolha_usuario:
+            print("Você venceu!")
+            vitorias_usuario += 1
+        else:
+            print("A IA venceu!")
+            vitorias_ia += 1
+
+        print(f"\nPlacar: Você {vitorias_usuario} x IA {vitorias_ia}")
+
+
+if __name__ == "__main__":
+    par_impar()
